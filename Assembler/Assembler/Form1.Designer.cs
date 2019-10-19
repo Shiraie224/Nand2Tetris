@@ -31,6 +31,7 @@
             this.Start = new System.Windows.Forms.Button();
             this.TestBox = new System.Windows.Forms.TextBox();
             this.Debug = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Start
@@ -62,11 +63,21 @@
             this.Debug.TabIndex = 2;
             this.Debug.Text = "DebugText";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 12);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Git用テスト";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Debug);
             this.Controls.Add(this.TestBox);
             this.Controls.Add(this.Start);
@@ -82,6 +93,7 @@
         private System.Windows.Forms.Button Start;
         private System.Windows.Forms.TextBox TestBox;
         private System.Windows.Forms.Label Debug;
+        private System.Windows.Forms.Label label1;
     }
 }
 
