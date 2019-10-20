@@ -1,0 +1,87 @@
+﻿namespace VMtoASM
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// 必要なデザイナー変数です。
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// 使用中のリソースをすべてクリーンアップします。
+        /// </summary>
+        /// <param name="disposing">マネージド リソースを破棄する場合は true を指定し、その他の場合は false を指定します。</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows フォーム デザイナーで生成されたコード
+
+        /// <summary>
+        /// デザイナー サポートに必要なメソッドです。このメソッドの内容を
+        /// コード エディターで変更しないでください。
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.Start = new System.Windows.Forms.Button();
+            this.TestBox = new System.Windows.Forms.TextBox();
+            this.Debug = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // Start
+            // 
+            this.Start.Location = new System.Drawing.Point(60, 92);
+            this.Start.Name = "Start";
+            this.Start.Size = new System.Drawing.Size(140, 85);
+            this.Start.TabIndex = 1;
+            this.Start.Text = "変換!";
+            this.Start.UseVisualStyleBackColor = true;
+            this.Start.Click += new System.EventHandler(this.Start_Click);
+            // 
+            // TestBox
+            // 
+            this.TestBox.Location = new System.Drawing.Point(240, 92);
+            this.TestBox.MaxLength = 0;
+            this.TestBox.Multiline = true;
+            this.TestBox.Name = "TestBox";
+            this.TestBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.TestBox.Size = new System.Drawing.Size(530, 203);
+            this.TestBox.TabIndex = 2;
+            // 
+            // Debug
+            // 
+            this.Debug.AutoSize = true;
+            this.Debug.Location = new System.Drawing.Point(238, 77);
+            this.Debug.Name = "Debug";
+            this.Debug.Size = new System.Drawing.Size(60, 12);
+            this.Debug.TabIndex = 3;
+            this.Debug.Text = "DebugText";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Debug);
+            this.Controls.Add(this.TestBox);
+            this.Controls.Add(this.Start);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button Start;
+        private System.Windows.Forms.TextBox TestBox;
+        private System.Windows.Forms.Label Debug;
+    }
+}
+
