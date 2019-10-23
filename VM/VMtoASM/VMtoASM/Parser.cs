@@ -39,7 +39,7 @@ namespace VMtoASM
         //入力ファイル/ストリームを開いて、パースを行う準備をする
         public Parser(StreamReader in_sr)
         {
-           
+            sr = in_sr;
         }
 
         //さらにコマンドが存在するか？
@@ -72,13 +72,42 @@ namespace VMtoASM
         }
 
         //現コマンドの種類を返す
-        public int commandType()
+        private int commandType()
         {
             if (cr_com.Contains(target_ARITH1) || cr_com.Contains(target_ARITH2))
             {
                 return C_ARITHMETIC;
             }
             return C_NONE;
+        }
+
+        //現コマンドの最初の引数を返す
+        public string arg1()
+        {
+            string arg1 ="";
+            if(commandType() == 0)
+            {
+                if (cr_com.Contains(target_ARITH1))
+                {
+                    arg1 = "add";
+                    return arg1;
+                }
+                if (cr_com.Contains(target_ARITH2))
+                {
+                    arg1 = "sub";
+                    return arg1;
+                }
+            }
+
+            return arg1;
+        }
+
+        //現コマンドの2番目の引数を返す
+        public int arg2()
+        {
+            int arg2 = 0;
+
+            return arg2;
         }
 
     }
