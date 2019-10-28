@@ -1,0 +1,9 @@
+B:\Deve\Nand2Tetris\VM\VMtoASM\VMtoASM\bin\Debug\VMtoASM.exe.config
+B:\Deve\Nand2Tetris\VM\VMtoASM\VMtoASM\bin\Debug\VMtoASM.exe
+B:\Deve\Nand2Tetris\VM\VMtoASM\VMtoASM\bin\Debug\VMtoASM.pdb
+B:\Deve\Nand2Tetris\VM\VMtoASM\VMtoASM\obj\Debug\VMtoASM.csprojAssemblyReference.cache
+B:\Deve\Nand2Tetris\VM\VMtoASM\VMtoASM\obj\Debug\VMtoASM.Form1.resources
+B:\Deve\Nand2Tetris\VM\VMtoASM\VMtoASM\obj\Debug\VMtoASM.Properties.Resources.resources
+B:\Deve\Nand2Tetris\VM\VMtoASM\VMtoASM\obj\Debug\VMtoASM.csproj.GenerateResource.cache
+B:\Deve\Nand2Tetris\VM\VMtoASM\VMtoASM\obj\Debug\VMtoASM.exe
+B:\Deve\Nand2Tetris\VM\VMtoASM\VMtoASM\obj\Debug\VMtoASM.pdb

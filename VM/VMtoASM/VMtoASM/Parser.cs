@@ -14,12 +14,12 @@ namespace VMtoASM
         const int C_ARITHMETIC = 0;
         const int C_PUSH = 1;
         const int C_POP = 2;
-        const int C_LABEL = 3;
-        const int C_GOTO = 4;
-        const int C_IF = 5;
-        const int C_FUNCTION = 6;
-        const int C_RETURN = 7;
-        const int C_CALL = 8;
+        const int C_FUNCTION = 3;
+        const int C_CALL = 4;
+        const int C_LABEL = 5;
+        const int C_GOTO = 6;
+        const int C_IF = 7;       
+        const int C_RETURN = 8;        
         const int C_NONE = 15;
         const string target_ARITH1 = "add";
         const string target_ARITH2 = "sub";
@@ -35,6 +35,7 @@ namespace VMtoASM
 
         private StreamReader sr;
         private String cr_com　="";
+        private String[] arg;
 
         //入力ファイル/ストリームを開いて、パースを行う準備をする
         public Parser(StreamReader in_sr)
@@ -68,23 +69,33 @@ namespace VMtoASM
             {
                 cr_com = cr_com.Remove(loc_comment, cr_com.Length - loc_comment);
             }
-            cr_com = cr_com.Replace(" ", "");
         }
 
         //現コマンドの種類を返す
-        private int commandType()
+        public int commandType()
         {
             if (cr_com.Contains(target_ARITH1) || cr_com.Contains(target_ARITH2))
             {
                 return C_ARITHMETIC;
             }
+            if (cr_com.Contains(target_PUSH))
+            {
+                return C_PUSH;
+            }
+            if (cr_com.Contains(target_POP))
+            {
+                return C_POP;
+            }
+
             return C_NONE;
         }
 
         //現コマンドの最初の引数を返す
         public string arg1()
         {
-            string arg1 ="";
+            string arg1 = "";
+            
+            //算術演算子の場合
             if(commandType() == 0)
             {
                 if (cr_com.Contains(target_ARITH1))
@@ -99,6 +110,12 @@ namespace VMtoASM
                 }
             }
 
+            if ((commandType() >= 1) & commandType() <= 8)
+            {
+                arg = cr_com.Split(' ');
+                return arg[1];
+            }
+
             return arg1;
         }
 
@@ -106,6 +123,13 @@ namespace VMtoASM
         public int arg2()
         {
             int arg2 = 0;
+
+            if ((commandType() >= 1) & commandType() <= 4)
+            {
+                arg = cr_com.Split(' ');
+                arg2 = Convert.ToInt32(arg[2]);
+                return arg2;
+            }
 
             return arg2;
         }
